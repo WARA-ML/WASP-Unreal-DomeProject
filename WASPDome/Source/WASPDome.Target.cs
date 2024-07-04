@@ -11,5 +11,11 @@ public class WASPDomeTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 
 		ExtraModuleNames.AddRange( new string[] { "WASPDome" } );
+		RegisterModulesCreatedByRider();
+	}
+
+	private void RegisterModulesCreatedByRider()
+	{
+		ExtraModuleNames.AddRange(new string[] { "WASPDomeCore", "WASPUserInterface", "WASPUIComponents" });
 	}
 }
