@@ -13,4 +13,11 @@ UCLASS()
 class WASPDOME_API AWASPPlayerController : public APlayerController
 {
 	GENERATED_BODY()
+
+protected:
+	virtual void BeginPlay() override;
+	virtual void SetupInputComponent() override;
+
+	void LoadWorld1();
+	void LoadWorld2();
 };
