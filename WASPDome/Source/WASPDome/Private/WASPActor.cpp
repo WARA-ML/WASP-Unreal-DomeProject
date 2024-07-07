@@ -11,11 +11,15 @@ AWASPActor::AWASPActor()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
+void AWASPActor::PostLoad()
+{
+	Super::PostLoad();
+}
+
 // Called when the game starts or when spawned
 void AWASPActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
@@ -23,4 +27,3 @@ void AWASPActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
-

@@ -6,6 +6,11 @@
 #include "CoreMinimal.h"
 #include "WASPPlayerController.generated.h"
 
+class AWASPCharacter;
+class AWASPHUD;
+class AWASPActor;
+class UWASPGameInstance;
+
 /**
  * 
  */
@@ -18,6 +23,24 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void SetupInputComponent() override;
 
+	void OpenMainMenu();
+	void ShowMouse();
+	void HideMouse();
+
+	// Keyboard Input
+	void OnLeftMouseClicked();
+	void OnLeftMouseReleased();
+
 	void LoadWorld1();
 	void LoadWorld2();
+
+private:
+	UPROPERTY()
+	const UWASPGameInstance* GameInstance = nullptr;
+
+	UPROPERTY()
+	AWASPCharacter* MainCharacter = nullptr;
+
+	UPROPERTY()
+	AWASPHUD* HUD = nullptr;
 };

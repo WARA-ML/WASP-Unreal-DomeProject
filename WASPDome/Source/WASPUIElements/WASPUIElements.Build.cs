@@ -1,8 +1,8 @@
 ﻿using UnrealBuildTool;
 
-public class WASPUIComponents : ModuleRules
+public class WASPUIElements : ModuleRules
 {
-	public WASPUIComponents(ReadOnlyTargetRules Target) : base(Target)
+	public WASPUIElements(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
@@ -20,6 +20,7 @@ public class WASPUIComponents : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+				"WASPUIComponents",
 				"UMG"
 			}
 		);

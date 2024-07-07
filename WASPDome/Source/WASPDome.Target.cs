@@ -19,7 +19,7 @@ public class WASPDomeTarget : TargetRules
 		{
 			"WASPDomeCore",
 			"WASPUserInterface",
-			"WASPUIComponents"
+			"WASPUIComponents", "WASPUIElements"
 		});
 	}
 }

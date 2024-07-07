@@ -19,7 +19,8 @@ public class WASPDomeEditorTarget : TargetRules
 		{
 			"WASPDomeCore",
 			"WASPUserInterface",
-			"WASPUIComponents"
+			"WASPUIComponents",
+			"WASPUIElements"
 		});
 	}
 }

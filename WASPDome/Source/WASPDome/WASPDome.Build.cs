@@ -11,13 +11,17 @@ public class WASPDome : ModuleRules
 		PublicDependencyModuleNames.AddRange(new[]
 		{
 			"Core",
-			"CoreUObject",
 			"Engine",
+			"CoreUObject",
 			"InputCore",
-			"LevelSequence"
+			"WASPUserInterface"
 		});
 
-		PrivateDependencyModuleNames.AddRange(new string[] { });
+		PrivateDependencyModuleNames.AddRange(new[]
+		{
+			"LevelSequence",
+			"UMG"
+		});
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

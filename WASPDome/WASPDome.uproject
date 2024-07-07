@@ -1,64 +1,74 @@
 {
-  "FileVersion": 3,
-  "EngineAssociation": "5.2",
-  "Category": "",
-  "Description": "",
-  "Modules": [
-    {
-      "Name": "WASPDome",
-      "Type": "Runtime",
-      "LoadingPhase": "Default"
-    },
-    {
-      "Name": "WASPDomeCore",
-      "Type": "Runtime",
-      "LoadingPhase": "Default"
-    },
-    {
-      "Name": "WASPUserInterface",
-      "Type": "Runtime",
-      "LoadingPhase": "Default"
-    },
-    {
-      "Name": "WASPUIComponents",
-      "Type": "Runtime",
-      "LoadingPhase": "Default"
-    }
-  ],
-  "Plugins": [
-    {
-      "Name": "nDisplay",
-      "Enabled": true,
-      "SupportedTargetPlatforms": [
-        "Win64",
-        "Linux"
-      ]
-    },
-    {
-      "Name": "OpenXR",
-      "Enabled": true,
-      "SupportedTargetPlatforms": [
-        "Win64",
-        "Linux",
-        "Android",
-        "HoloLens"
-      ]
-    },
-    {
-      "Name": "VirtualScouting",
-      "Enabled": true,
-      "SupportedTargetPlatforms": [
-        "Win64",
-        "Linux"
-      ]
-    },
-    {
-      "Name": "Switchboard",
-      "Enabled": true
-    }
-  ],
-  "TargetPlatforms": [
-    "WindowsNoEditor",
-    "Windows"
-  ]
+	"FileVersion": 3,
+	"EngineAssociation": "5.2",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "WASPDome",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "WASPDomeCore",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "WASPUserInterface",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "WASPUIComponents",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "WASPUIElements",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "nDisplay",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Linux"
+			]
+		},
+		{
+			"Name": "OpenXR",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Linux",
+				"Android",
+				"HoloLens"
+			]
+		},
+		{
+			"Name": "VirtualScouting",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Linux"
+			]
+		},
+		{
+			"Name": "Switchboard",
+			"Enabled": true
+		},
+		{
+			"Name": "AnalyticsBlueprintLibrary",
+			"Enabled": true
+		}
+	],
+	"TargetPlatforms": [
+		"WindowsNoEditor",
+		"Windows",
+		"HoloLens"
+	]
 }

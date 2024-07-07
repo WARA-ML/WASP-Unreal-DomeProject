@@ -20,7 +20,8 @@ public class WASPDomeCore : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				"WASPDome"
+				"WASPDome",
+				"WASPUserInterface"
 			}
 		);
 	}

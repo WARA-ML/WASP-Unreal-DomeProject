@@ -2,25 +2,29 @@
 
 public class WASPUserInterface : ModuleRules
 {
-    public WASPUserInterface(ReadOnlyTargetRules Target) : base(Target)
-    {
-        PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+	public WASPUserInterface(ReadOnlyTargetRules Target) : base(Target)
+	{
+		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-        PublicDependencyModuleNames.AddRange(
-            new string[]
-            {
-                "Core",
-            }
-        );
+		PublicDependencyModuleNames.AddRange(
+			new[]
+			{
+				"Core",
+				"WASPDome"
+			}
+		);
 
-        PrivateDependencyModuleNames.AddRange(
-            new string[]
-            {
-                "CoreUObject",
-                "Engine",
-                "Slate",
-                "SlateCore"
-            }
-        );
-    }
+		PrivateDependencyModuleNames.AddRange(
+			new[]
+			{
+				"CoreUObject",
+				"Engine",
+				"Slate",
+				"SlateCore",
+				"UMG",
+				"WASPUIComponents",
+				"WASPUIElements"
+			}
+		);
+	}
 }
