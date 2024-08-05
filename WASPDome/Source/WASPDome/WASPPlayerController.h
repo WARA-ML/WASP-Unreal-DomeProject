@@ -6,6 +6,7 @@
 #include "CoreMinimal.h"
 #include "WASPPlayerController.generated.h"
 
+class UEnhancedInputLocalPlayerSubsystem;
 class AWASPCharacter;
 class AWASPHUD;
 class AWASPActor;
@@ -33,6 +34,10 @@ protected:
 
 	void LoadWorld1();
 	void LoadWorld2();
+	void LoadWorld3();
+	void LoadWorld4();
+	void LoadWorld5();
+	void SpawnAvatar();
 
 private:
 	UPROPERTY()
@@ -42,5 +47,11 @@ private:
 	AWASPCharacter* MainCharacter = nullptr;
 
 	UPROPERTY()
+	AWASPActor* Avatar = nullptr;
+
+	UPROPERTY()
 	AWASPHUD* HUD = nullptr;
+
+	UPROPERTY()
+	UEnhancedInputLocalPlayerSubsystem* PlayerInputSubsystem = nullptr;
 };

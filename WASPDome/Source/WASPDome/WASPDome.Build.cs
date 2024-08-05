@@ -20,7 +20,8 @@ public class WASPDome : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new[]
 		{
 			"LevelSequence",
-			"UMG"
+			"UMG",
+			"EnhancedInput"
 		});
 
 		// Uncomment if you are using Slate UI

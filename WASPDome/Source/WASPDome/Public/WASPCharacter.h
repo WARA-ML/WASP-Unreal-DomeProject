@@ -6,23 +6,59 @@
 #include "CoreMinimal.h"
 #include "WASPCharacter.generated.h"
 
+class UInputMappingContext;
+class UInputAction;
+struct FInputActionValue;
+
 UCLASS()
 class WASPDOME_API AWASPCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
 	AWASPCharacter();
 
+	UInputMappingContext* GetCharacterMappingContext() const;
+
+	void AddInputMappingContext();
+
+	void RemoveInputMappingContext();
+
+private:
+	UFUNCTION(BlueprintCallable, Category= "Input")
+	void MoveForward(const FInputActionValue& Value);
+
+	UFUNCTION(BlueprintCallable, Category= "Input")
+	void MoveRight(const FInputActionValue& Value);
+
+	UFUNCTION(BlueprintCallable, Category= "Input")
+	void MoveUp(const FInputActionValue& Value);
+
+	UFUNCTION(BlueprintCallable, Category= "Input")
+	void Turn(const FInputActionValue& Value);
+
+	UFUNCTION(BlueprintCallable, Category= "Input")
+	void LookUp(const FInputActionValue& Value);
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = "true"))
+	UInputMappingContext* CharacterMappingContext;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = "true"))
+	UInputAction* Ia_MoveForward;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = "true"))
+	UInputAction* Ia_MoveRight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = "true"))
+	UInputAction* Ia_MoveUp;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = "true"))
+	UInputAction* Ia_Turn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = "true"))
+	UInputAction* Ia_LookUp;
+
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 };
